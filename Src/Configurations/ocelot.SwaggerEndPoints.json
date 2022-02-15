@@ -1,0 +1,17 @@
+{
+  "SwaggerEndPoints": [
+    {
+      "Key": "petstore",
+      "Config": [
+        {
+          "Name": "Petstore API",
+          "Version": "v2",
+          "Service": {
+            "Name": "petstore",
+            "Path": "/v2/swagger.json"
+          }
+        }
+      ]
+    }
+  ]
+}

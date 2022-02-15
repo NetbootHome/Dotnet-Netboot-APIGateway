@@ -1,0 +1,12 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "https",
+      "ServiceName": "petstore",
+      "UpstreamPathTemplate": "/petstore/{everything}",
+      "UpstreamHttpMethod": [],
+      "SwaggerKey": "petstore"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+name: Update Infrastructure
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 0 * * *'
+    
+jobs:
+  build:
+    # Define the execution on the self-hosted server.
+    runs-on: [self-hosted]
+          
+    # Define all the steps of the workflow
+    steps:
+      # Checking out the repository
+      - name: Checking out the repository
+        uses: actions/checkout@v2
+
+      # Update associated images
+      - name: Update associated images
+        run: "sudo /usr/local/bin/docker-compose pull"
+        
+      # Stop Containers
+      - name: Stop Containers
+        run: "sudo /usr/local/bin/docker-compose stop"
+        
+      # Start Containers
+      - name: Start Containers
+        run: "sudo /usr/local/bin/docker-compose up -d"
