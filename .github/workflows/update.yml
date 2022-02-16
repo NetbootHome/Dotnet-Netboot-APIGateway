@@ -1,12 +1,12 @@
-name: Update Infrastructure
+name: Update API Gateway
 
 on:
   push:
     branches:
       - main
   schedule:
-    - cron: '0 0 * * *'
-    
+    - cron: '0 0 * * SUN'
+
 jobs:
   build:
     # Define the execution on the self-hosted server.
@@ -20,12 +20,12 @@ jobs:
 
       # Update associated images
       - name: Update associated images
-        run: "sudo /usr/local/bin/docker-compose pull"
+        run: "sudo /usr/local/bin/docker-compose -p gateway pull"
         
       # Stop Containers
       - name: Stop Containers
-        run: "sudo /usr/local/bin/docker-compose stop"
+        run: "sudo /usr/local/bin/docker-compose -p gateway stop"
         
       # Start Containers
       - name: Start Containers
-        run: "sudo /usr/local/bin/docker-compose up -d"
+        run: "sudo /usr/local/bin/docker-compose -p gateway up -d"

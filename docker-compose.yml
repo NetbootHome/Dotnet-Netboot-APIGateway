@@ -7,7 +7,6 @@ services:
       context: .
       dockerfile: Src/Dockerfile
     networks:
-      - traefik
       - gateway
     labels:
       - traefik.enable=true
@@ -22,6 +21,4 @@ services:
 
 networks:
   gateway:
-    external: true
-  traefik:
     external: true
