@@ -1,5 +1,7 @@
 # MyDocker-Gateway
 
+[![Update API Gateway](https://github.com/NetbootHome/MyDocker-APIGateway/actions/workflows/update.yml/badge.svg)](https://github.com/NetbootHome/MyDocker-APIGateway/actions/workflows/update.yml)
+
 This is a sample implementation of a gateway using Ocelot.
 To find out more about Ocelot, you can check their official [documentation](http://ocelot.readthedocs.io/) and their [repository](https://github.com/TomPallister/Ocelot).
 
