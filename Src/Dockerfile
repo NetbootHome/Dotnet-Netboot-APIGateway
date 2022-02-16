@@ -18,7 +18,7 @@ RUN dotnet build "APIGateway.csproj" -c Release -o /app/build
 
 FROM build AS publish
 RUN dotnet publish "APIGateway.csproj" -c Release -o /app/publish
-RUN cp /app/https/apigateway.pfx /app/publish/localhost.pfx
+RUN cp /app/https/localhost.pfx /app/publish/localhost.pfx
 
 FROM base AS final
 WORKDIR /app
