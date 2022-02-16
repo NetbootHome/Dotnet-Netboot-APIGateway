@@ -10,7 +10,7 @@ services:
       - gateway
     labels:
       - traefik.enable=true
-      - traefik.docker.network=traefik
+      - traefik.docker.network=gateway
       - traefik.http.routers.apigateway.entryPoints=websecure
       - traefik.http.routers.apigateway.tls=true
       - traefik.http.routers.apigateway.service=apigateway
