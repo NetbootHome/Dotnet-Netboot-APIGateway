@@ -1,5 +1,5 @@
 using APIGateway;
-using APIGateway.Extensions;
+using MicroAutomation.Log.Extensions;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
@@ -53,9 +53,9 @@ public class Program
 
             // Add ocelot configuration
             config.AddOcelotWithSwaggerSupport((o) =>
-        {
-            o.Folder = "Configurations";
-        });
+            {
+                o.Folder = "Configurations";
+            });
 
             configuration = config.Build();
         });

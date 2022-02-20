@@ -1,6 +1,6 @@
 {
   "GlobalConfiguration": {
-    "BaseUrl": "http://localhost",
+    "BaseUrl": "https://api.netboot.fr",
     "ServiceDiscoveryProvider": {
       "Type": "AppConfiguration",
       "PollingIntervalSeconds": 10000

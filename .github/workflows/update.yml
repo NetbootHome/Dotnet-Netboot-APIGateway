@@ -20,12 +20,12 @@ jobs:
 
       # Update associated images
       - name: Update associated images
-        run: "sudo /usr/local/bin/docker-compose -p gateway pull"
+        run: "sudo /usr/local/bin/docker-compose -p gateway -f docker-compose.yml -f docker-compose.production.yml pull"
         
       # Stop Containers
       - name: Stop Containers
-        run: "sudo /usr/local/bin/docker-compose -p gateway stop"
+        run: "sudo /usr/local/bin/docker-compose -p gateway -f docker-compose.yml -f docker-compose.production.yml stop"
         
       # Start Containers
       - name: Start Containers
-        run: "sudo /usr/local/bin/docker-compose -p gateway up -d"
+        run: "sudo /usr/local/bin/docker-compose -p gateway -f docker-compose.yml -f docker-compose.production.yml up -d"

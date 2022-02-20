@@ -6,19 +6,3 @@ services:
     build:
       context: .
       dockerfile: Src/Dockerfile
-    networks:
-      - gateway
-    labels:
-      - traefik.enable=true
-      - traefik.docker.network=gateway
-      - traefik.http.routers.apigateway.entryPoints=websecure
-      - traefik.http.routers.apigateway.tls=true
-      - traefik.http.routers.apigateway.service=apigateway
-      - traefik.http.routers.apigateway.rule=Host("api.netboot.fr")
-      - traefik.http.routers.apigateway.tls.certresolver=letsencrypt
-      - traefik.http.services.apigateway.loadbalancer.server.port=443
-      - traefik.http.services.apigateway.loadbalancer.server.scheme=https
-
-networks:
-  gateway:
-    external: true
