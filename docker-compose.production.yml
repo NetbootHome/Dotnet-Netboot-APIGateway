@@ -13,8 +13,8 @@ services:
       - traefik.http.routers.apigateway.service=apigateway
       - traefik.http.routers.apigateway.rule=Host("api.netboot.fr")
       - traefik.http.routers.apigateway.tls.certresolver=letsencrypt
-      - traefik.http.services.apigateway.loadbalancer.server.port=443
-      - traefik.http.services.apigateway.loadbalancer.server.scheme=https
+      - traefik.http.services.apigateway.loadbalancer.server.port=80
+      - traefik.http.services.apigateway.loadbalancer.server.scheme=http
 
 networks:
   gateway:
