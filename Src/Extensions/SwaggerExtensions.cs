@@ -25,6 +25,10 @@ public static class SwaggerExtensions
     /// <param name="app"></param>
     public static void UseOcelotSwagger(this IApplicationBuilder app, IConfiguration configuration)
     {
+        // Get gateway configuration
+        var gatewayConfig = new GatewayConfiguration();
+        configuration.GetSection(nameof(GatewayConfiguration)).Bind(gatewayConfig);
+
         // Enable middleware to serve generated Swagger as a JSON endpoint
         app.UseSwagger(c =>
         {
@@ -38,8 +42,10 @@ public static class SwaggerExtensions
             opt.DocExpansion(DocExpansion.None);
             opt.EnableFilter();
             opt.DisplayRequestDuration();
-            opt.OAuthClientId(configuration.GetSection(nameof(GatewayConfiguration)).Get<GatewayConfiguration>().OAuthClientId);
-            opt.OAuthClientSecret(configuration.GetSection(nameof(GatewayConfiguration)).Get<GatewayConfiguration>().OAuthClientSecret);
+            if (!string.IsNullOrEmpty(gatewayConfig.OAuthClientId))
+                opt.OAuthClientId(gatewayConfig.OAuthClientId);
+            if (!string.IsNullOrEmpty(gatewayConfig.OAuthClientSecret))
+                opt.OAuthClientSecret(gatewayConfig.OAuthClientSecret);
             opt.OAuthUsePkce();
 
             // Ocelot
