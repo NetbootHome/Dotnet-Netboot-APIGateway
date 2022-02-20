@@ -28,4 +28,4 @@ jobs:
         
       # Start Containers
       - name: Start Containers
-        run: "sudo /usr/local/bin/docker-compose -p gateway -f docker-compose.yml -f docker-compose.production.yml up -d"
+        run: "sudo /usr/local/bin/docker-compose -p gateway -f docker-compose.yml -f docker-compose.production.yml up -d --build"
