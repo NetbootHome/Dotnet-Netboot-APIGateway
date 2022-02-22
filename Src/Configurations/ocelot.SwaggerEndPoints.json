@@ -5,7 +5,7 @@
       "Config": [
         {
           "Name": "MicroAutomation Demo API",
-          "Version": "v2",
+          "Version": "v1",
           "Service": {
             "Name": "microautomation",
             "Path": "/docs/v1/swagger.json"
