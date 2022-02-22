@@ -3,10 +3,10 @@
     {
       "DownstreamPathTemplate": "/{everything}",
       "DownstreamScheme": "https",
-      "ServiceName": "petstore",
-      "UpstreamPathTemplate": "/petstore/{everything}",
+      "ServiceName": "microautomation",
+      "UpstreamPathTemplate": "/microautomation/{everything}",
       "UpstreamHttpMethod": [],
-      "SwaggerKey": "petstore"
+      "SwaggerKey": "microautomation"
     }
   ]
 }

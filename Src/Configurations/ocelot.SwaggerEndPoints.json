@@ -1,14 +1,14 @@
 {
   "SwaggerEndPoints": [
     {
-      "Key": "petstore",
+      "Key": "microautomation",
       "Config": [
         {
-          "Name": "Petstore API",
+          "Name": "MicroAutomation Demo API",
           "Version": "v2",
           "Service": {
-            "Name": "petstore",
-            "Path": "/v2/swagger.json"
+            "Name": "microautomation",
+            "Path": "/docs/v1/swagger.json"
           }
         }
       ]
