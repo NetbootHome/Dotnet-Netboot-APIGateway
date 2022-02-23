@@ -1,0 +1,13 @@
+{
+    "Routes": [{
+        "DownstreamPathTemplate": "/{everything}",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [{
+            "Host": "activedirectorymanager.api.service",
+            "Port": 80
+        }],
+        "UpstreamPathTemplate": "/adm/{everything}",
+        "UpstreamHttpMethod": [],
+        "SwaggerKey": "activedirectorymanager"
+    }]
+}

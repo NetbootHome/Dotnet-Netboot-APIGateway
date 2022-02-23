@@ -1,10 +1,19 @@
 {
     "SwaggerEndPoints": [{
-        "Key": "microautomation",
-        "Config": [{
-            "Name": "MicroAutomation Demo API",
-            "Version": "v1",
-            "Url": "http://microautomation.demo.webapi/docs/v1/swagger.json"
-        }]
-    }]
+            "Key": "microautomation",
+            "Config": [{
+                "Name": "MicroAutomation Demo API",
+                "Version": "v1",
+                "Url": "http://microautomation.demo.webapi/docs/v1/swagger.json"
+            }]
+        },
+        {
+            "Key": "activedirectorymanager",
+            "Config": [{
+                "Name": "Active Directory Manager API",
+                "Version": "v1",
+                "Url": "http://activedirectorymanager.api.service/docs/v1/swagger.json"
+            }]
+        }
+    ]
 }
