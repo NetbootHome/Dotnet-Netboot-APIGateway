@@ -1,9 +1,9 @@
 {
-  "GlobalConfiguration": {
-    "BaseUrl": "https://api.netboot.fr",
-    "ServiceDiscoveryProvider": {
-      "Type": "AppConfiguration",
-      "PollingIntervalSeconds": 10000
+    "GlobalConfiguration": {
+        "BaseUrl": "https://api.netboot.fr",
+        "ServiceDiscoveryProvider": {
+            "Type": "AppConfiguration",
+            "PollingIntervalSeconds": 10000
+        }
     }
-  }
 }

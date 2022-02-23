@@ -1,12 +1,13 @@
 {
-  "Routes": [
-    {
-      "DownstreamPathTemplate": "/{everything}",
-      "DownstreamScheme": "https",
-      "ServiceName": "microautomation",
-      "UpstreamPathTemplate": "/microautomation/{everything}",
-      "UpstreamHttpMethod": [],
-      "SwaggerKey": "microautomation"
-    }
-  ]
+    "Routes": [{
+        "DownstreamPathTemplate": "/{everything}",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [{
+            "Host": "microautomation.demo.webapi",
+            "Port": 80
+        }],
+        "UpstreamPathTemplate": "/microautomation/demo/{everything}",
+        "UpstreamHttpMethod": [],
+        "SwaggerKey": "microautomation"
+    }]
 }

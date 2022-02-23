@@ -1,17 +1,10 @@
 {
-  "SwaggerEndPoints": [
-    {
-      "Key": "microautomation",
-      "Config": [
-        {
-          "Name": "MicroAutomation Demo API",
-          "Version": "v1",
-          "Service": {
-            "Name": "microautomation",
-            "Path": "/docs/v1/swagger.json"
-          }
-        }
-      ]
-    }
-  ]
+    "SwaggerEndPoints": [{
+        "Key": "microautomation",
+        "Config": [{
+            "Name": "MicroAutomation Demo API",
+            "Version": "v1",
+            "Url": "http://microautomation.demo.webapi/docs/v1/swagger.json"
+        }]
+    }]
 }
