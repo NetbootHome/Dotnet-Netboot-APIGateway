@@ -16,7 +16,7 @@ jobs:
     steps:
       # Checking out the repository
       - name: Checking out the repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       # Update associated images
       - name: Update associated images
